@@ -38,6 +38,9 @@ class X1HybridG4InformationModel(InformationModel):
 
 
 class X1HybridG4DataModel(Data200Model):
+    class Config:
+        arbitrary_types_allowed = True
+
     @computed_field
     def inverter_ac_voltage(self) -> Volts:
         return Volts(self.field000 / 10)

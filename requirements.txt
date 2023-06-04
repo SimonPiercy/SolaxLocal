@@ -1,2 +1,2 @@
-pydantic>=2.0a4
+pydantic>=2.0b2
 requests>=2.0.0
