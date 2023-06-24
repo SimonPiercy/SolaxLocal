@@ -8,9 +8,9 @@ from typing import Any, Callable
 
 
 class X1HybridG4(Inverter):
-    def __init__(self, ipaddress: str, pwd: str):
-        super().__init__(ipaddress, pwd)
-        self.params = f'optType=ReadRealTimeData&pwd={self.pwd}'
+    def __init__(self, ip_address: str | None = None, password: str | None = None):
+        super().__init__(ip_address, password)
+        self.params = f'optType=ReadRealTimeData&pwd={self.password}'
         self.response_model: Callable = X1HybridG4Model
         self.information_model: Callable = X1HybridG4InformationModel
         self.data_model: Callable = X1HybridG4DataModel
