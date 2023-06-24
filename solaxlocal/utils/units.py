@@ -1,7 +1,3 @@
-class Unit:
-    pass
-
-
 MAX_16_BIT = 2 ** 16
 MAX_SIGNED_16_BIT = 2 ** 15 - 1
 
@@ -14,29 +10,33 @@ def dual_register(value1: int, value2) -> int:
     return value1 + value2 * MAX_16_BIT
 
 
-class Hz(float):
+class Unit(float):
+    pass
+
+
+class Hz(Unit):
     unit_of_measure = 'Hz'
 
 
-class Volts(float):
+class Volts(Unit):
     unit_of_measure = 'Volts'
 
 
-class Amps(float):
+class Amps(Unit):
     unit_of_measure = 'Amps'
 
 
-class Watts(float):
+class Watts(Unit):
     unit_of_measure = 'Watts'
 
 
-class Kwh(float):
+class Kwh(Unit):
     unit_of_measure = 'kWh'
 
 
-class Percent(float):
+class Percent(Unit):
     unit_of_measure = '%'
 
 
-class DegreesC(float):
+class DegreesC(Unit):
     unit_of_measure = '°C'

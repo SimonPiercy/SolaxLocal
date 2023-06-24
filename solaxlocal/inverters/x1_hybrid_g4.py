@@ -4,7 +4,7 @@ from solaxlocal.models.data import Data200Model
 from solaxlocal.models.information import InformationModel
 from solaxlocal.models.response import ResponseModel
 from solaxlocal.utils.units import *
-from typing import List, Any, Callable
+from typing import Any, Callable
 
 
 class X1HybridG4(Inverter):
@@ -20,8 +20,8 @@ class X1HybridG4Model(ResponseModel):
     sn: str
     ver: str
     type: int
-    data: List[int] = Field(alias='Data')
-    information: List[Any] = Field(alias='Information')
+    data: list[int] = Field(alias='Data')
+    information: list[Any] = Field(alias='Information')
 
 
 class X1HybridG4InformationModel(InformationModel):
